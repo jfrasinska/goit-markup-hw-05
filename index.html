@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Main page</title>
+    <title>Agencja</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -29,7 +29,9 @@
               ><h2 class="first-logo">Web<span>Studio</span></h2></a
             >
             <ul class="nav-bar">
-              <li><a class="nav-link" href="#">Agencja</a></li>
+              <li>
+                <a class="nav-link is-active" href="./index.html">Agencja</a>
+              </li>
               <li><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
               <li><a class="nav-link" href="#">Kontakt</a></li>
             </ul>
@@ -57,7 +59,14 @@
       <section class="hero-section">
         <div class="container hero-container">
           <h1 class="hero-header">Efektywne rozwiązania dla waszego biznesu</h1>
-          <button class="button-box">Zamów usługę</button>
+          <button data-modal-open class="button-box">Zamów usługę</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button data-modal-close class="modal-closing-button">
+                &times;
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!--Article section-->
@@ -130,32 +139,44 @@
         </ul>
       </section>
       <!--Information section-->
-      <section class="container information-container">
+      <section class="container products-container">
         <h2 class="secondary-header">Czym się zajmujemy</h2>
         <ul class="portfolio list">
           <li>
-            <img
-              src="images/img_1.jpeg"
-              alt="Stnowisko pracy z wydocznym monitorem, tabltem, klawiaturą i notatkami"
-              width="370"
-              height="294"
-            />
+            <div class="product-box">
+              <img
+                class="product-pic"
+                src="images/img_1.jpeg"
+                alt="Stnowisko pracy z wydocznym monitorem, tabltem, klawiaturą i notatkami"
+                width="370"
+                height="294"
+              />
+              <div class="product-desc">Aplikacje komputerowe</div>
+            </div>
           </li>
           <li>
-            <img
-              src="images/img_2.jpeg"
-              alt="Biurko z laptopem i monitorem"
-              width="370"
-              height="294"
-            />
+            <div class="product-box">
+              <img
+                class="product-pic"
+                src="images/img_2.jpeg"
+                alt="Biurko z laptopem i monitorem"
+                width="370"
+                height="294"
+              />
+              <div class="product-desc">Aplikacje mobilne</div>
+            </div>
           </li>
           <li>
-            <img
-              src="images/img_3.jpeg"
-              alt="Paleta kolorów na ekranie tableta, na tle biurka"
-              width="370"
-              height="294"
-            />
+            <div class="product-box">
+              <img
+                class="product-pic"
+                src="images/img_3.jpeg"
+                alt="Paleta kolorów na ekranie tableta, na tle biurka"
+                width="370"
+                height="294"
+              />
+              <div class="product-desc">Rozwiązania graficzne</div>
+            </div>
           </li>
         </ul>
       </section>
@@ -402,5 +423,6 @@
         </div>
       </section>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
